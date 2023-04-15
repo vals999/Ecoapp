@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 html {
-    overflow-x: hidden;
-  }
+     overflow-x: hidden;
+  }  
 
 .body{
     font-family: 'Poppins', sans-serif;
-    /* background-image: url(../images/background2.webp); */
     background-attachment: fixed;
     background-size: cover;
     min-height: 100vh;  
@@ -14,13 +13,13 @@ html {
     padding-top: 50px;
 }
 
-#barranav{
-    background-color: rgb(233, 233, 233);
+/* #barranav{
+    background-color: #ecf0e8;
     position: fixed;
     top: 0;
     width: 100%;
-    height: 50px;
-}
+    height: 60px;
+  } */
 
 .navbar-nav .nav-link:active {
     color: #2f57a1;
@@ -28,9 +27,9 @@ html {
 }
   
 .navbar-nav .nav-link:hover {
-    color: #1e4d9f;
-    border-bottom: 2px solid #1e4d9f;
-} 
+    color: #2f57a1;
+    border-bottom: 2px solid #2f57a1;
+}
 
 .intro {
     background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../images/laptop-2838921_1920.jpg');
@@ -74,6 +73,23 @@ html {
 #invis{
     visibility: hidden;
 }
+.personal{
+    background-color: #cacaca;
+    padding: 100px;
+}
+
+.carousel-inner{
+    position:relative;
+}
+
+.carousel-inner > .carousel-item > img {
+    width:17%;
+    
+    display: flex;
+    justify-content: center;
+  }
+
+
 
 .footer {
     background-color: rgb(27, 38, 49);
@@ -162,4 +178,5 @@ html {
         width: 100%;
         margin-bottom: 30px;
     }
+
 }
