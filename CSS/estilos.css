@@ -74,22 +74,74 @@ html {
     visibility: hidden;
 }
 .personal{
-    background-color: #cacaca;
-    padding: 100px;
+    padding: 50px;
+    background-color: #daecd8;
 }
 
-.carousel-inner{
-    position:relative;
+.personal-container{
+    display:grid;
+    grid-template-columns: 50px 1fr 50px;
+    gap: 1em;
+    align-items: center;
 }
 
-.carousel-inner > .carousel-item > img {
-    width:17%;
+.body-personal{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.body-personal--show{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.arrow-personal{
+    width: 90%;
+    cursor: pointer;
+}
+
+.subtitle{
+    color: #000000;
+}
+
+.info-paragraph{
+    color: #000000;
+}
+
+.picture-img{
     
-    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.questions{
+    padding: 50px;
+    background-color: #ecf0e8;
+}
+
+.title-accordion{
+    margin-bottom: 100px;
+    font-size:xx-large;
+    color: #000000;
+    display: grid;
+    align-items: center;
     justify-content: center;
-  }
+}
 
-
+.accordion{
+    margin-bottom: 40px; 
+}
 
 .footer {
     background-color: rgb(27, 38, 49);
@@ -101,12 +153,12 @@ html {
 .footer-container{
     max-width: 1200px;
     margin: 0 auto;
-
   }
 
 .footer-row{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
 .footer-links{
