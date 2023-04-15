@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 html {
-    scroll-behavior: smooth;
-  }  
+    overflow-x: hidden;
+  }
 
 .body{
     font-family: 'Poppins', sans-serif;
@@ -15,22 +15,22 @@ html {
 }
 
 #barranav{
-    background-color: #ecf0e8;
+    background-color: rgb(233, 233, 233);
     position: fixed;
     top: 0;
     width: 100%;
-    height: 60px;
-  }
+    height: 50px;
+}
 
 .navbar-nav .nav-link:active {
     color: #2f57a1;
     border-bottom: 2px solid #2f57a1;
 }
   
-/* .navbar-nav .nav-link:hover {
+.navbar-nav .nav-link:hover {
     color: #1e4d9f;
-    border-bottom: 2px solid blue;
-} */
+    border-bottom: 2px solid #1e4d9f;
+} 
 
 .intro {
     background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../images/laptop-2838921_1920.jpg');
