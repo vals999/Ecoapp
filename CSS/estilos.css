@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 html {
-    /* overflow-x: hidden; */
+     overflow-x: hidden;
   }  
 
 .body{
@@ -73,6 +73,23 @@ html {
 #invis{
     visibility: hidden;
 }
+.personal{
+    background-color: #cacaca;
+    padding: 100px;
+}
+
+.carousel-inner{
+    position:relative;
+}
+
+.carousel-inner > .carousel-item > img {
+    width:17%;
+    
+    display: flex;
+    justify-content: center;
+  }
+
+
 
 .footer {
     background-color: rgb(27, 38, 49);
@@ -161,4 +178,5 @@ html {
         width: 100%;
         margin-bottom: 30px;
     }
+
 }
