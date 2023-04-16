@@ -1,13 +1,19 @@
-const btn = document.getElementById('boton_magico');
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
 
-btn.addEventListener('click', () => {
-  const form = document.getElementById('form_id');
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
 
-  if (form.style.display === 'none') {
-    // 👇️ this SHOWS the form
-    form.
-  } else {
-    // 👇️ this HIDES the form
-    form.style.display = 'none';
-  }
-});
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()

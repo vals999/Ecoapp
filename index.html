@@ -35,7 +35,7 @@
                 <div class="container">
                     <h2 class="intro_title">subtitulo</h2>
                     <p class="intro_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et numquam molestiae distinctio sunt sit. Voluptatem, tempore omnis, dolorum deleniti quae labore explicabo reprehenderit quaerat sunt atque assumenda excepturi neque hic.</p>
-                    <button type="button" class="btn btn-warning rounded-5">Click aquí</button>
+                    <button type="button" class="btn btn-warning">Click aquí</button>
                 </div>              
             </section>
 
@@ -157,22 +157,41 @@
                     </div>
                 </div>
             </section>
-
-            <section class="container p-4" id="form_id">
-                <form>
-                    <div class="form-floating mb-3">
-                        <input type="name" class="form-control" id="floatingInput" placeholder="nombre">
-                        <label for="floatingInput">Nombre</label>
+            <section class="container border rounded-2 my-5 mx-auto w-50">
+                <h2 class="p-2">Contáctanos</h2>
+                <form class="row g-3 needs-validation" novalidate> <!--desactiva la validacion automatica-->
+                    <div class="col-6">
+                        <label for="nameId" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nameId" required>
+                        <div class="valid-feedback">
+                            Correcto!
+                        </div>
+                        <div class="invalid-feedback">
+                            Es necesario escribir tu nombre
+                        </div>
                     </div>
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Apellido</label>
+                    <div class="col-6">
+                        <label for="surnameId" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="surnameId" required>
+                        <div class="valid-feedback">
+                            Correcto!
+                        </div>
+                        <div class="invalid-feedback">
+                            Es necesario escribir tus apellidos
+                        </div>
                     </div>
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Email</label>
-                    </div>      
-                    <button type="submit" class="btn btn-primary">Submit</button>            
+                    <div class="col-12">
+                        <label for="emailId" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="emailId" placeholder="nombre@ejemplo.com">
+                        <div id="emailHelp" class="form-text">Nunca compartiremos tu correo con nadie.</div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check ps-0">
+                            <label for="textAreaId" class="form-label">Déjanos un comentario</label>
+                            <textarea class="form-control" id="textAreaId" maxlength="180" style="resize: none"></textarea>                            
+                        </div>
+                    </div>
+                    <div><button type="submit" class="btn btn-primary mb-3">Submit</button></div>
                 </form>
             </section>
         </main>  
