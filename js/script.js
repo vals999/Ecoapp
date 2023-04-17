@@ -53,3 +53,30 @@ function validateForm() {
   });
 
 }
+
+a=true;
+
+$(document).ready(() => {
+  $('#sec_contact').hide();
+  $('#form-footer').click(function(){
+    if(a){
+      $('#sec_contact').show(); 
+      a=false;
+    }
+    else{
+      $('#sec_contact').hide();
+      a=true;
+    }
+  })   
+  
+  $('#nav_contact').click(function(){
+    if(a){
+      $('#sec_contact').show(); 
+      a=false;
+    }
+    else{
+      $('#sec_contact').hide();
+      a=true;
+    }
+  }) 
+});
