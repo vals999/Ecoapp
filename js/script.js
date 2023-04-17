@@ -1,45 +1,55 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-  'use strict'
+function validateForm() {
+  //constantes que guardan los elementos del formulario
+  const form = document.getElementById("contactForm")
+  const name = document.getElementById("nameId")
+  const surname = document.getElementById("surnameId")
+  const email = document.getElementById("emailId")
+  const textArea = document.getElementById("textAreaId")
+  //expresiones regulares para validar el nombre, apellido y email. Nombre y apellido solo aceptan letras, el email tiene que tener un formato de email
+  const nameRegex = /^[a-zA-Z]+$/;      
+  const emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
-
-      form.classList.add('was-validated')
-      if (form.checkValidity()) {
-        mostrarDatos()
-      }
-
-    }, false)
-  })
-})()
-
-function mostrarDatos() {
-    // Obtener valores de los campos del formulario
-    var nombre = document.getElementById("nameId").value;
-    var apellido = document.getElementById("surnameId").value;
-    var correo = document.getElementById("emailId").value;
-    var comentario = document.getElementById("textAreaId").value;
+  //variables que guardan lo ingresado en el formulario
+  localStorage.setItem("name", name.value);
+  localStorage.setItem("surname", surname.value);
+  localStorage.setItem("email", email.value);
+  localStorage.setItem("textArea", textArea.value);
   
-    // Crear una nueva página HTML con el titulo "Datos ingresados"
-    var nuevaPagina = window.open("");
-    
-    // Mostrar los datos ingresados en la nueva página
-    nuevaPagina.document.write('<title>Resumen</title>');
-    nuevaPagina.document.write("<h1>Datos ingresados:</h1>");
-    nuevaPagina.document.write("<p>Nombre: " + nombre + "</p>");
-    nuevaPagina.document.write("<p>Apellido: " + apellido + "</p>");
-    nuevaPagina.document.write("<p>Correo: " + correo + "</p>");
-    nuevaPagina.document.write("<p>Comentario: " + comentario + "</p>");
-    nuevaPagina.window.print();
-    
-}
+  form.addEventListener("submit", (e) => {
+    //remueve los bordes rojos 
+    document.getElementById("nameId").classList.remove("border-danger");
+    document.getElementById("surnameId").classList.remove("border-danger");
+    document.getElementById("emailId").classList.remove("border-danger");
+    //remueve los mensajes de error
+    document.getElementById("nameError").innerHTML = "";
+    document.getElementById("surnameError").innerHTML = "";
+    document.getElementById("emailError").innerHTML = "";
 
+    //contador de errores
+    let errorsCount = 0;
+    //valida que los campos no esten vacios y que cumplan con las expresiones regulares
+    if (name.value === "" || name.value == null || !nameRegex.test(name.value)) {
+      errorsCount++;
+      //agrega el mensaje de error
+      document.getElementById("nameError").innerHTML = "Verifique su nombre";      
+      //agrega el borde rojo al input
+      document.getElementById("nameId").classList.add("border-danger")
+    }
+    if (surname.value === "" || surname.value == null || !nameRegex.test(surname.value)) {
+      errorsCount++;
+      document.getElementById("surnameError").innerHTML = "Verifique su apellido";
+      document.getElementById("surnameId").classList.add("border-danger")
+    }
+    if (email.value === "" || email.value == null || !emailRegex.test(email.value)) {
+      errorsCount++;
+      document.getElementById("emailError").innerHTML = "Verifique su email";
+      document.getElementById("emailId").classList.add("border-danger")
+    }
+    //si hay errores no envia el formulario
+    if (errorsCount > 0) {
+      //evita que se envie el formulario
+      e.preventDefault();      
+    }
+  });
+
+}

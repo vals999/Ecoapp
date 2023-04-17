@@ -11,35 +11,40 @@
         <link rel="shortcut icon" href="./images/image-removebg-preview.png" type="image/x-con">       
     </head>
     <body class="body">
+        <!--encabezado con la barra de navegacion-->
         <header>
             <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img src="images/image-removebg-preview.png" alt="Forge" width="30" height="24" ></a>
+                    <a class="navbar-brand fw-light fst-italic fw-fw-medium" href="#"><img src="images/image-removebg-preview.png" alt="Forge" width="30" height="24"> FORGE</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <div class="navbar-nav">
-                            <a class="nav-link text-black" aria-current="page" href="#">Inicio</a>
-                            <a class="nav-link text-black" href="#sec_caract">Características</a>
-                            <a class="nav-link text-black" href="#sec_prices">Precios</a>
-                        </div>
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link text-black" aria-current="page" href="#">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link text-black" href="#sec_caract">Características</a></li>
+                            <li class="nav-item"><a class="nav-link text-black" href="#sec_prices">Precios</a></li>
+                            <li class="nav-item"><a class="nav-link text-black" href="#sec_personal">Personal</a></li>
+                            <li class="nav-item"><a class="nav-link text-black" href="#sec_questions">FAQ</a></li>
+                            <li class="nav-item"><a class="nav-link text-black" href="#sec_contact">Contacto</a></li>
+                        </ul>
                     </div>
                 </div>
             </nav>
         </header>
         <main>
-
+            <!--seccion de introduccion-->
             <section class="intro" id="sec_intro">
                 <div class="container">
                     <h1 class="intro_title fw-semibold fst-italic">FORGE</h1>
                     <p class="intro_paragraph">Bienvenido/a a FORGE, un emprendimiento de software de modelado 3D. Nos enfocamos en proporcionar soluciones de software de modelado 3D de alta calidad y fácil de usar para diseñadores, ingenieros y otros profesionales creativos. Nuestro equipo está formado por expertos en el desarrollo de software y en el diseño 3D, que trabajan juntos para crear herramientas eficaces y eficientes que permitan a los usuarios dar vida a sus ideas y proyectos. Nuestro objetivo es ayudar a los clientes a crear diseños y modelos precisos y detallados de una manera más rápida y fácil. ¡Gracias por visitarnos!</p>
-                    <button type="button" class="btn btn-warning">Click aquí</button>
-                </div>              
+                    <!-- <button type="button" class="btn btn-warning">Click aquí</button> -->
+                    <a href="#sec_prices" class="btn btn-warning">Click aquí</a>
+                 </div>              
             </section>
-
-            <section class="container text-center mb-5" id="sec_caract">
-                <h2 class="text-primary py-5 fw-semibold">¿QUÉ OFRECEMOS?</h2>
+            <!--seccion de caracteristicas ofrecidas-->
+            <section class="container text-center py-5" id="sec_caract">
+                <h2 class="text-primary fw-semibold" id="titles">¿QUÉ OFRECEMOS?</h2>
                     <div class="row">
                         <article class="col" >
                             <img src="images/badge-3d.svg" class="caract_icon p-2">
@@ -58,15 +63,15 @@
                         </article>
                     </div>                   
             </section>
-
-            <section class="prices text-center pb-5" id="sec_prices">
+            <!--seccion de planes y precios-->
+            <section class="prices text-center py-5" id="sec_prices">
                 <div class="container">
-                <h2 class="py-5 fw-semibold">PLANES & PRECIOS</h2>
+                <h2 class="fw-semibold" id="titles">PLANES & PRECIOS</h2>
                 <div class="row">
                     <article class="col" >
                         <img src="images/cash.svg" class="prices_icon" id="invis">
                         <h3 class="price_title">PRUEBA</h3>
-                        <h1 class="text-primary">$0</h1>
+                        <h1 class="text-primary">FREE</h1>
                         <p class="price_paragraph"> Este plan permite a los usuarios probar nuestro software de modelado 3D de manera gratuita durante un período limitado de tiempo. Con este plan, los usuarios pueden acceder a una selección de herramientas y funciones básicas para crear modelos 3D simples.</p>
                         
                     </article>
@@ -74,22 +79,23 @@
                     <article class="col border-start border-secondary-subtle">
                         <img src="images/cash.svg" class="prices_icon">
                         <h3 class="price_title">BÁSICO 👍</h3>
-                        <h1 class="text-primary">$20</h1>
+                        <h1 class="text-primary">$19,99</h1>
                         <p class="price_paragraph">Nuestro plan básico ofrece un conjunto más amplio de herramientas y funciones para ayudar a los usuarios a crear modelos 3D más detallados y complejos. Este plan es ideal para estudiantes, profesionales independientes y pequeñas empresas que necesitan una solución de modelado 3D eficaz y accesible.</p>
                     </article>
                     
                     <article class="col border-start border-secondary-subtle">
                         <img src="images/cash-stack.svg" class="prices_icon">
                         <h3 class="price_title">🔥PROFESIONAL🔥</h3>
-                        <h1 class="text-primary">$40</h1>
+                        <h1 class="text-primary">$39,99</h1>
                         <p class="price_paragraph">Incluye todas las funciones y herramientas avanzadas de nuestro software de modelado 3D, lo que permite a los usuarios crear modelos 3D extremadamente detallados y sofisticados. Este plan es ideal para empresas y profesionales que necesitan una solución de modelado 3D completa y personalizable para llevar sus proyectos a un nivel superior.</p>
                     </article>
                                       
                 </div>  
             </div>   
             </section>
-
+            <!--seccion de personal-->
              <section class="personal" id="sec_personal">
+                <h2 id="titles"></h2>
                 <div class = "personal-container container">
                     <img src="images/arrow-left.svg" class="arrow-personal" id="arrow-before">
                         <section class="body-personal body-personal--show" data-id="1">
@@ -118,10 +124,10 @@
                         <img src="images/arrow-right.svg" class="arrow-personal" id="arrow-after">
                 </div>
             </section> 
-            
+            <!--seccion de preguntas frecuentes-->
             <section class ="questions" id="sec_questions">
                 <div class="question-container container">
-                    <h4 class="title-accordion fw-semibold">PREGUNTAS FRECUENTES</h4>
+                    <h2 class="title-accordion fw-semibold" id="titles">PREGUNTAS FRECUENTES</h2>
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingOne">
@@ -160,39 +166,25 @@
                     </div>
                 </div>
             </section>
-            <section class="container border rounded-2 my-5 mx-auto w-50">
-                <h2 class="p-2">Contáctanos</h2>
-                <form class="row g-3 needs-validation" id="contactForm" novalidate> <!--desactiva la validacion automatica -->
+            <!--seccion del formulario de contacto-->            
+            <section class="container border rounded-2 my-5 mx-auto w-50" id="sec_contact">
+                <h2 class="p-2" >CONTACTO</h2>
+                <form class="row g-3" id="contactForm" onclick="validateForm()" action="summary.html" target="_blank">
                     <div class="col-6">
                         <label for="nameId" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nameId" required>
-                        <div class="valid-feedback">
-                            Correcto!
-                        </div>
-                        <div class="invalid-feedback">
-                            Es necesario escribir tu nombre
-                        </div>
+                        <input type="text" class="form-control" id="nameId">
+                        <div class="text-danger" id="nameError"></div>
                     </div>
                     <div class="col-6">
                         <label for="surnameId" class="form-label">Apellidos</label>
-                        <input type="text" class="form-control" id="surnameId" required>
-                        <div class="valid-feedback">
-                            Correcto!
-                        </div>
-                        <div class="invalid-feedback">
-                            Es necesario escribir tus apellidos
-                        </div>
+                        <input type="text" class="form-control" id="surnameId">  
+                        <div class="text-danger" id="surnameError"></div>
                     </div>
                     <div class="col-12">
                         <label for="emailId" class="form-label">Correo electrónico</label>
-                        <input type="email" class="form-control" id="emailId" placeholder="nombre@ejemplo.com" required>
-                        <div class="valid-feedback">
-                            Correcto!
-                        </div>
-                        <div class="invalid-feedback">
-                            Es necesario escribir tu correo electrónico
-                        </div>
-                        <div id="emailHelp" class="form-text">Nunca compartiremos tu correo con nadie.</div>                        
+                        <input type="text" class="form-control" id="emailId" placeholder="nombre@ejemplo.com">  
+                        <div class="text-danger" id="emailError"></div>
+                        <div id="emailHelp" class="form-text">Nunca compartiremos su correo con nadie.</div>                        
                     </div>
                     <div class="col-12">
                         <div class="form-check ps-0">
@@ -201,12 +193,14 @@
                         </div>
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-primary mb-3" id="boton-form">Enviar</button>
+                        <button type="submit" class="btn btn-primary mb-3" id="boton-form" >Enviar</button>
+                        <div class="text-danger "id="error"></div>    
                     </div> 
+                               
                 </form>
-            </section>
+            </section>           
         </main>  
-
+        <!--footer-->
         <footer class="footer">
             <div class = "footer-container">
                 <div class = "footer-row">
@@ -254,6 +248,7 @@
                 </div>
             </div>
         </footer>
+        <!--importacion de javascript necesaria-->
         <script src="js/sliders.js"></script>
         <script src="js/script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
