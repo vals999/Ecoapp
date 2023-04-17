@@ -75,7 +75,7 @@ html {
 }
 .personal{
     padding: 50px;
-    background-color: #daecd8;
+    background-color: #fff;
 }
 
 .personal-container{
@@ -106,7 +106,13 @@ html {
 .arrow-personal{
     width: 90%;
     cursor: pointer;
+    transform: scale(1.0);
+    transition: transform 0.5s ease-in-out;
 }
+.arrow-personal:hover{
+    transform: scale(1.2);    
+}
+
 
 .subtitle{
     color: #000000;
