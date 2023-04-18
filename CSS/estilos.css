@@ -49,6 +49,7 @@ html {
 .caract_icon, .prices_icon{
    width: 60px;
 } 
+
 #sec_prices{
     background-color: #ecf0e8;
 }
@@ -230,4 +231,7 @@ html {
 #scroll{
     max-height: 500px;
     overflow: auto;
+}
+ul{
+    list-style: none;
 }
