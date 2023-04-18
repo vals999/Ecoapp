@@ -64,7 +64,7 @@ $(document).ready(() => {
       a=false;
     }
     else{
-      $('#sec_contact').hide();
+      $('#sec_contact').fadeToggle();
       a=true;
     }
   })   
@@ -75,7 +75,7 @@ $(document).ready(() => {
       a=false;
     }
     else{
-      $('#sec_contact').hide();
+      $('#sec_contact').fadeToggle();
       a=true;
     }
   }) 
