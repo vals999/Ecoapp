@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-html {
-     overflow-x: hidden;
-  }  
 
 .body{
     font-family: 'Poppins', sans-serif;
@@ -65,6 +62,7 @@ html {
     grid-template-columns: 50px 1fr 50px;
     gap: 1em;
     align-items: center;
+    justify-content: center;
 }
 
 .body-personal{
@@ -105,7 +103,6 @@ html {
 }
 
 .picture-img{
-    
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -218,6 +215,13 @@ html {
         width: 100%;
         margin-bottom: 30px;
     }
+
+    .picture-img{
+        width: 75px;
+        height: 75px;
+    }
+
+
 
 }
 
